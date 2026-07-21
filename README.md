@@ -1,62 +1,83 @@
-# Rogue Prompt
+<div align="center">
 
-Reading the adversaries who target AI, and building the defenses that hold when they do.
+# Reading the AI Adversary
 
-I spent years attributing attacks against enterprises and disrupting threat actor infrastructure. This is that discipline applied to AI: counter-adversary tradecraft, pointed at how large language model and agent systems are actually attacked, and at what the way they are attacked reveals about who is behind it.
+**Counter-adversary research and defense-in-depth for AI systems.**
 
-## Two theses hold this together
+Who attacks AI, how they persist, and what the way they do it reveals about *who they are.*
 
-- **Attribution is convergence, and AI TTPs are a new axis of it.** Attribution was never about a single indicator. It is infrastructure, tradecraft, tooling, and history stacked until the picture is undeniable. AI hands adversaries new tradecraft, and that tradecraft becomes another axis feeding the same method.
-- **Structural beats statistical.** Every control on an AI system either decides from a fact the adversary cannot rewrite (structural: signed tokens, egress allowlists, bind manifests) or from a classifier reading language (statistical: it can be evaded, usually silently). Statistical controls raise cost and generate signal. Structural controls are what actually hold.
+![status](https://img.shields.io/badge/status-research_in_progress-2ea44f?style=flat-square)
+![MITRE ATLAS](https://img.shields.io/badge/MITRE-ATLAS-e02f2f?style=flat-square)
+![OWASP](https://img.shields.io/badge/OWASP-LLM_%26_Agentic-2f6fe0?style=flat-square)
+![NIST](https://img.shields.io/badge/NIST-AI_RMF-8a8f98?style=flat-square)
+![D3FEND](https://img.shields.io/badge/MITRE-D3FEND-6f4fe0?style=flat-square)
 
-The first thesis leads. The second is how the defense follows from the offense.
+</div>
 
-## Status labels
+---
+
+## The two ideas this hangs on
+
+> **Attribution is convergence, and AI TTPs are a new axis of it.**
+> A single indicator attributes nobody. Folded into the Diamond Model alongside infrastructure, tooling, and history, an adversary's AI tradecraft becomes another vertex of a picture that does.
+
+> **Structural beats statistical.**
+> Every control on an AI system either decides from a fact the adversary cannot rewrite (structural: signed tokens, egress allowlists, bind manifests) or from a classifier it can evade (statistical: it fails, usually silently). Statistical controls buy cost and signal. Structural controls are what hold.
+
+The first idea leads. The second is how the defense follows from the offense.
+
+---
+
+## Navigate
+
+The adversary section is the lead. The defense section exists to show what the offense implies, not the other way around. **Start with `01`.**
+
+| Path | What it is | Status |
+|---|---|---|
+| [`01 · persistence-typology/`](01-reading-the-ai-adversary/persistence-typology) | Persistence mechanism read as an actor-intent signal (a series) | anchor + memory poisoning **live**, 3 stubs |
+| [`01 · kill-chains/`](01-reading-the-ai-adversary/kill-chains) | One chain per OWASP LLM ID, two lenses each | method + LLM01 **live** |
+| [`01 · actor-profiling.md`](01-reading-the-ai-adversary/actor-profiling.md) | Threat-actor-to-AI-tooling profiling, public actors | stub |
+| [`02 · structural-vs-statistical.md`](02-defense-in-depth/structural-vs-statistical.md) | The thesis | **live** |
+| [`02 · defense-in-depth/`](02-defense-in-depth) | Structural core, trusted computing base, detection, frameworks | stubs |
+| [`open-questions.md`](open-questions.md) | What is unsolved, and where I know it breaks | **live** |
+
+---
+
+## How to read the labels
 
 Everything here is labeled, honestly.
 
-- **[ANALYSIS]** adversary-behavior analysis grounded in public frameworks (MITRE ATLAS, OWASP, Lockheed Martin, NIST).
-- **[DESIGN]** worked-through architecture. Intellectually mine, defensible, not a deployed system.
-- **[OPEN] / theory-craft** a hypothesis, staked in public ahead of the case files, open to being wrong.
+- **`[ANALYSIS]`** adversary-behavior analysis grounded in public frameworks.
+- **`[DESIGN]`** worked-through architecture. Mine, defensible, not a deployed system.
+- **`[OPEN]`** a hypothesis, staked in public ahead of the case files, open to being wrong.
 
-Nothing here is a deployed system, a weaponized artifact, or drawn from any employer environment. Public cases and general method only.
+Nothing here is a deployed system, a weaponized artifact, or drawn from any employer environment. **Public cases and general method only.**
 
-## How to navigate
+---
 
-```
-01-reading-the-ai-adversary/   THE LEAD. The counter-adversary view of AI attacks.
-   persistence-typology/       Persistence mechanism as an actor-intent signal (a series).
-      00-persistence-typology.md   the anchor / lens
-      01-memory-poisoning.md       deep dive 1
-      02..04                       the other three mechanisms
-   kill-chains/                One chain per OWASP LLM ID, two lenses each.
-      README.md                    the method (courses of action + structural chokepoint)
-      llm01-direct-injection.md    the first worked chain
-   actor-profiling.md          threat-actor-to-AI-tooling profiling (public actors)
+<details>
+<summary><b>Prior art, named</b></summary>
 
-02-defense-in-depth/           SUPPORT. The defender's architecture.
-   structural-vs-statistical.md    the thesis
-   structural-core.md, trusted-computing-base.md, detection/, frameworks.md
+<br>
 
-open-questions.md              What is unsolved. Read this to judge whether I know where the hard parts are.
-```
+- The lethal trifecta — Simon Willison, 2025
+- Least agency — OWASP Top 10 for Agentic Applications, 2026
+- Instruction/data separation (dual-LLM; CaMeL) — Willison; Google DeepMind, 2025
+- PDP/PEP, deny-by-default — NIST SP 800-207
+- Cyber Kill Chain and courses-of-action matrix — Lockheed Martin
+- Diamond Model of Intrusion Analysis; Pyramid of Pain
+- Adversary and defensive technique vocabularies — MITRE ATLAS, MITRE D3FEND
+- Risk taxonomies — OWASP LLM Top 10 2025, Agentic Top 10 2026
+- Governance — NIST AI RMF, Generative AI Profile (AI 600-1)
 
-Start with `01-reading-the-ai-adversary/`. The defense section exists to show what the offense implies, not the other way around.
+</details>
 
-## Attribution (prior art, named)
+---
 
-- The lethal trifecta: Simon Willison, 2025.
-- Least agency: OWASP Top 10 for Agentic Applications, 2026.
-- Instruction/data separation (dual-LLM; CaMeL): Simon Willison; Google DeepMind, 2025.
-- PDP/PEP, deny-by-default: NIST SP 800-207.
-- Cyber Kill Chain and courses-of-action matrix: Lockheed Martin.
-- Diamond Model of Intrusion Analysis; Pyramid of Pain.
-- Adversary and defensive technique vocabularies: MITRE ATLAS, MITRE D3FEND.
-- Risk taxonomies: OWASP Top 10 for LLM Applications 2025 and Agentic Applications 2026.
-- Governance: NIST AI RMF and the Generative AI Profile (AI 600-1).
+<div align="center">
 
-## Who
+A cyber threat intelligence and counter-adversary practitioner, pointed at the surface everyone else is arriving at from application security.
 
-A cyber threat intelligence and counter-adversary practitioner: Navy, then CTI, then years hunting nation-state APTs, ransomware crews, and organized threat actors. Led CTI teams, contributed to the Verizon DBIR and two CISA #StopRansomware advisories. This is the discipline I came from, pointed at the surface everyone else is arriving at from application security.
+<sub>All opinions are my own and do not reflect my employer.</sub>
 
-Published as Rogue Prompt. All opinions are my own and do not reflect my employer.
+</div>
