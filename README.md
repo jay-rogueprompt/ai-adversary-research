@@ -75,8 +75,8 @@ Nothing here is a deployed system, a weaponized artifact, or drawn from any empl
 
 ## `// whoami`
 
-Navy, then cyber threat intelligence, then years operating against real adversaries: nation-state APTs, ransomware crews, and organized threat actors. Led CTI teams, contributed to the **Verizon DBIR** and two **CISA #StopRansomware** advisories.
+A cyber threat intelligence and counter-adversary operations practitioner: nation-state adversary tracking, threat hunting, incident response, insider threat, CTI program leadership in a large regulated enterprise. This repo is the defender's-eye view of a surface most AI security writing approaches from the application-security side.
 
-I attribute attacks and disrupt adversaries. This is that discipline, applied to how AI actually gets attacked.
+Contact and more writing: [Substack](https://substack.com/@rogueprompt) · [LinkedIn](https://www.linkedin.com/in/jayd-rogueprompt)
 
 <sub>All opinions are my own and do not reflect my employer.</sub>
