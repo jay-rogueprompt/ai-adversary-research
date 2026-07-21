@@ -24,14 +24,14 @@ One interdiction per stage, using the Lockheed Martin courses-of-action verbs. A
 
 | Stage | Adversary action | ATLAS technique (name) | Course of action | Control |
 |---|---|---|---|---|
-| Craft payload | Injection designed | LLM Prompt Injection | Deny | Authentication and rate limiting, block unauthenticated access |
+| Craft payload | Injection designed | LLM Prompt Injection | Deny | Authentication and rate limiting; block unauthenticated access |
 | Malicious message | "Ignore previous instructions" | LLM Prompt Injection: Direct | Disrupt | Input filtering (semantic and pattern) |
-| Guidelines overridden | System prompt bypassed | Jailbreak / prompt injection | Disrupt | Prompt hardening, constrain role, lock instructions |
-| Unauthorized data query | Private store read | Discovery / data access | Degrade | Least privilege, scope data access to minimum |
-| Email send | Exfiltration | Exfiltration via AI Agent Tool Invocation (AML.T0086) | Deceive | Human approval gate on send |
-| Privilege escalation | Acts as admin | Impact | Detect | Output and action monitoring, alert on anomalous action |
+| Guidelines overridden | System prompt bypassed | Jailbreak / prompt injection | Disrupt | Prompt hardening; constrain role; lock instructions |
+| Unauthorized data query | Private store read | Discovery / data access | Degrade, Deceive | Least privilege on data scope; canary records seeded in the store |
+| Email send | Exfiltration | Exfiltration via AI Agent Tool Invocation (AML.T0086) | Deny | Structural egress allowlist; human approval gate as the statistical fallback |
+| Privilege escalation | Acts as admin | Impact | Detect | Output and action monitoring; alert on anomalous action |
 
-That table is the coverage story: there is something to do at every stage, and defense in depth means an attacker has to beat all of them.
+That table is the coverage story: there is something to do at every stage, and defense in depth means an attacker has to beat all of them. The Deceive cell is real deception, in the courses-of-action sense: canary records seeded in the private store turn a successful unauthorized read into a detection event. That is the counter-adversary use of the store itself, and it fires precisely when every control upstream of it has already failed.
 
 ## Lens 2: the structural chokepoint (priority)
 
@@ -54,4 +54,4 @@ One precondition, chain collapsed. That is the difference between a matrix that 
 - Courses-of-action model and kill chain: Lockheed Martin.
 - Exfiltration via AI Agent Tool Invocation: MITRE ATLAS AML.T0086 (other techniques named by function; verify IDs against the current ATLAS release).
 - Risk anchor: OWASP Top 10 for LLM Applications 2025, LLM01 Prompt Injection.
-- The lethal trifecta: Simon Willison, 2025. The structural-versus-statistical framing: the Agentic AI Defense in Depth work.
+- The lethal trifecta: Simon Willison, 2025. The structural-versus-statistical framing: the defense-in-depth section of this repository.

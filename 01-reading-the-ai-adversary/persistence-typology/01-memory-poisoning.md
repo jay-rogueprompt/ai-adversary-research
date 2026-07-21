@@ -10,7 +10,7 @@ Memory poisoning is the cheapest way to persist in an agentic system. That cheap
 
 ## What the mechanism actually is
 
-Memory poisoning plants instruction-shaped content in an agent's durable memory: a stored preference, a standing instruction, a remembered fact. The agent recalls it in a later session and acts on it, with no live injection present at the time. It maps to MITRE ATLAS AML.T0080 (memory poisoning / AI agent context poisoning): manipulating an LLM's memory to persist a change into future sessions.
+Memory poisoning plants instruction-shaped content in an agent's durable memory: a stored preference, a standing instruction, a remembered fact. The agent recalls it in a later session and acts on it, with no live injection present at the time. It maps to MITRE ATLAS AI Agent Context Poisoning (AML.T0080), memory-manipulation sub-technique: manipulating an agent's memory to persist a change into future sessions.
 
 The mechanic is simple, and its simplicity is the point. The payload does not need to survive network defenses or evade a sandbox. It needs to look like a normal thing for the agent to remember. The whole attack lives inside the product's intended behavior. That is why it is cheap, and it is why it is available to actors who could not touch the infrastructure underneath.
 
@@ -58,5 +58,5 @@ Next in the series: `02-mcp-descriptor-poisoning.md`, the supply-chain move, whe
 
 ## Attribution
 
-- MITRE ATLAS AML.T0080 (memory poisoning / AI agent context poisoning): the technique this piece reads.
+- MITRE ATLAS AI Agent Context Poisoning (AML.T0080), memory-manipulation sub-technique: the technique this piece reads.
 - The persistence-as-actor-signal lens is an application of traditional intrusion-analysis tradecraft to the agentic AI surface. The tradecraft is not mine. The mapping to this surface is the contribution, and it is a hypothesis, not a finding.

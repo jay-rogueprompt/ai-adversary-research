@@ -2,6 +2,8 @@
 
 **Status: [ANALYSIS]. Stub.**
 
-Profiling named, publicly attributed threat actors by how they use and target AI, sourced entirely from public reporting (GTIG, Mandiant, CISA, provider threat reports). Public actors and public cases only, never any employer environment.
+The claim this section will develop: provider attribution reporting is one of the most underused CTI sources in the field today. When Google GTIG, Microsoft, and the model providers themselves publish attributed misuse of frontier models (nation-state use for reconnaissance, phishing, malware development, C2 tooling), those disclosures are finished intelligence about adversary AI tradecraft. Most enterprises read them as news. The defender's job is to read them as CTI: extract the tradecraft, translate it into what an enterprise should expect, and turn it into hunt hypotheses.
 
-Thesis to develop: as the model providers publish attributed AI misuse (nation-state use of frontier models for recon, phishing, malware, C2), the defender's job is to read those disclosures through a CTI lens and translate them into what an enterprise should expect and hunt for. This section is the synthesizer between provider-side attribution and enterprise-side defense, and it feeds the attribution-as-convergence frame.
+This section is the synthesizer between provider-side attribution and enterprise-side defense, and it feeds the attribution-as-convergence frame: an actor's AI tooling choices become one more vertex on the Diamond Model.
+
+Sourcing discipline: public reporting only (GTIG, Mandiant, CISA, provider threat reports). Public actors and public cases, never any employer environment.

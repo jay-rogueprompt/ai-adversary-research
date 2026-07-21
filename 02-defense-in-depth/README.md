@@ -11,11 +11,13 @@ This is also the idea that turns the kill-chains work into an argument: the "str
 ## What's here
 
 - **`structural-vs-statistical.md`** the thesis. Published.
-- **`structural-core.md`** the load-bearing structural controls (identity, tokens, bind manifest, egress allowlist, mission capsule). Stub.
+- **`structural-core.md`** the load-bearing structural controls (identity, tokens, bind manifest, egress allowlist, Mission Manifest). Stub.
 - **`trusted-computing-base.md`** the full TCB with a compromise story per component. Stub.
-- **`detection/`** detection at the interpretive level (what an artifact reveals, what is invisible), not SIEM rule specs. Stubs.
+- **`detection/`** the detection layer: `detection-analytics.md` (the five behaviors worth firing on) and `deception-layer.md` (the assets that make an alert mean something). Stubs.
 - **`frameworks.md`** honest, technique-level framework mappings. Stub.
 
 ## Discipline
 
-Same as the lead section. Label everything ([DESIGN] here, mostly). Detection stays interpretive and CTI-flavored, not detection-engineering rule specs. No employer material.
+Same as the lead section. Label everything (`[DESIGN]` here, mostly). No employer material.
+
+The detection standard: each analytic is specified to the depth an analyst can act on and reconstruct from, which means naming the fields joined, the logic, the escalation threshold, the triage path, and what survives for forensics. It stops short of vendor-specific rule syntax, because the contribution here is which behaviors are worth firing on and what an artifact can ever tell you about the actor, not a portable SIEM ruleset. Detection engineering translates this; it does not replace it.

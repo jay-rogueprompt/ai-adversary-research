@@ -8,13 +8,13 @@ In traditional intrusion analysis, *how* an actor persists tells you almost as m
 
 Agentic AI systems have their own persistence surface, and it is different enough from traditional endpoints that the profiling map has to be redrawn. But the analytic move is the same: the mechanism an actor chooses to make their influence survive a session boundary reveals their sophistication, their patience, and whether they are hunting one target or many.
 
-There are four principal persistence mechanisms in an enterprise agentic deployment. Each maps to a MITRE ATLAS technique where one exists. Each says something different about who you are dealing with.
+There are four principal persistence mechanisms in an enterprise agentic deployment. Each maps to a public framework technique where one exists. Each says something different about who you are dealing with.
 
 ## The four mechanisms
 
 ### 1. Agent memory poisoning
 
-**Mechanism.** The actor plants an instruction-shaped item in the agent's durable memory (a preference, a "standing instruction," a fact) so it is recalled and acted on in future sessions without any live injection. Maps to MITRE ATLAS **AML.T0080 (Memory Poisoning / AI Agent Context Poisoning)**.
+**Mechanism.** The actor plants an instruction-shaped item in the agent's durable memory (a preference, a "standing instruction," a fact) so it is recalled and acted on in future sessions without any live injection. Maps to MITRE ATLAS **AI Agent Context Poisoning (AML.T0080)**, memory-manipulation sub-technique.
 
 **What it reveals.** Low to moderate sophistication, opportunistic, and product-aware. It is cheap, it requires only an understanding of the consumer-facing agent surface, and it assumes the target keeps using the same agent. It is noisy if the defender has a memory-write gate, because the write itself is an event. An actor choosing this is optimizing for persistence-through-the-product, and is probably not deeply resourced. It is also the mechanism most available to an **insider**, who understands the product surface and may have legitimate reason to be writing memory at all, which is what makes the insider case hard.
 
@@ -22,7 +22,7 @@ There are four principal persistence mechanisms in an enterprise agentic deploym
 
 ### 2. MCP descriptor poisoning
 
-**Mechanism.** The actor publishes or modifies a tool descriptor (name, description, schema) so a tool that looks safe behaves maliciously, or so the descriptor itself steers the agent's tool selection. Maps to the 2026 ATLAS addition **Publish Poisoned AI Agent Tool**, and relates to **AML.T0053 (AI Agent Tool Invocation)** as the trigger surface.
+**Mechanism.** The actor publishes or modifies a tool descriptor (name, description, schema) so a tool that looks safe behaves maliciously, or so the descriptor itself steers the agent's tool selection. Maps to **AI Agent Tool Poisoning (AML.T0110)**, one of the agent-focused techniques added to ATLAS in the October 2025 MITRE and Zenity Labs collaboration, with **AI Agent Tool Invocation (AML.T0053)** as the trigger surface.
 
 **What it reveals.** Moderate to high sophistication and a supply-chain mindset. It requires understanding the tool ecosystem, registry trust, and how descriptors flow into agent context. Crucially, it is a *one-to-many* play: a poisoned tool in a shared registry reaches every agent that binds it, not one target. An actor choosing this is thinking about a population of victims, which is organized-eCrime or nation-state supply-chain tradecraft, not opportunism.
 
@@ -30,7 +30,7 @@ There are four principal persistence mechanisms in an enterprise agentic deploym
 
 ### 3. Token and OAuth-grant persistence
 
-**Mechanism.** The actor establishes durable access at the identity layer: a task token that is not revoked, an OAuth grant that outlives the session, a delegation chain that keeps a foothold. This is not AI-specific in its mechanics, which is exactly the point.
+**Mechanism.** The actor establishes durable access at the identity layer: a task token that is not revoked, an OAuth grant that outlives the session, a delegation chain that keeps a foothold. The natural framework home is MITRE ATT&CK rather than ATLAS (Steal Application Access Token; Account Manipulation), and that is itself the tell: the mechanics are not AI-specific, which is exactly the point.
 
 **What it reveals.** High sophistication, identity-oriented, patient. It reflects the mature-actor insight that the durable foothold is the *credential*, not the content. An actor who persists via tokens understands that content-level tricks get cleaned up and identity-level access does not, until someone audits grants. This maps directly to how established intrusion sets already think about long-term access, and its appearance on the AI surface signals an actor who brought traditional tradecraft to a new target.
 
@@ -46,12 +46,12 @@ There are four principal persistence mechanisms in an enterprise agentic deploym
 
 ## The typology as a triage table
 
-| Mechanism | ATLAS / OWASP | Sophistication | Reach | Intent read |
+| Mechanism | Framework mapping | Sophistication | Reach | Intent read |
 |---|---|---|---|---|
-| Agent memory poisoning | AML.T0080 | Low-moderate | One target | Immediate single-target influence |
-| MCP descriptor poisoning | Publish Poisoned AI Agent Tool / AML.T0053 | Moderate-high | One-to-many | Scaled access via supply chain |
-| Token / OAuth persistence | (identity layer) | High | Deep, one target | Durable deniable access |
-| Index / embedding poisoning | LLM04 / LLM08 | High | Population, over time | Strategic influence at scale |
+| Agent memory poisoning | ATLAS AML.T0080 | Low-moderate | One target | Immediate single-target influence |
+| MCP descriptor poisoning | ATLAS AML.T0110 / AML.T0053 | Moderate-high | One-to-many | Scaled access via supply chain |
+| Token / OAuth persistence | ATT&CK (identity layer) | High | Deep, one target | Durable deniable access |
+| Index / embedding poisoning | OWASP LLM04 / LLM08 | High | Population, over time | Strategic influence at scale |
 
 The diagonal is the useful part: as you move down the table, reach and patience increase and the actor's likely resourcing increases with them. Recovering the mechanism during response is not just an IOC, it is a prior on who you are dealing with before attribution evidence arrives.
 
@@ -67,6 +67,7 @@ The payoff for a SOC: when your deception layer or your memory-write gate fires,
 - **The enterprise case record is thin.** Much of the public agentic-attack corpus is research and red-team work, not in-the-wild intrusions with attributed actors. The sophistication-to-mechanism mapping is reasoned from tradecraft analogy, not yet from a body of attributed cases. That is why this is labeled OPEN.
 - **Mechanisms combine.** Real intrusions chain persistence (token foothold plus a poisoned index for influence). The typology describes pure cases; reality is mixtures, and the mixture itself is a further signal I have not worked through.
 - **Insider cases distort the map.** An insider can reach several of these mechanisms with legitimate access, collapsing the sophistication signal. The insider dimension deserves its own treatment and I have not written it yet.
+- **The set may not be complete.** Agent-configuration modification (ATLAS AML.T0081) and agent-created scheduled tasks or automations are persistence surfaces this typology does not yet read. If the four-mechanism frame survives contact with cases, those are the candidate fifth and sixth, and the frame should be judged partly on how well it absorbs them.
 
 ## What would make this real
 

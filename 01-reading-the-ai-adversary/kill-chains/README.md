@@ -54,4 +54,4 @@ They share two words (Detect, Deceive) and are otherwise different tools. This s
 - Cyber Kill Chain and the courses-of-action matrix: Lockheed Martin.
 - Adversary technique vocabulary: MITRE ATLAS (mapped by technique, IDs verified against the current release before publishing).
 - Risk taxonomy anchor: OWASP Top 10 for LLM Applications 2025.
-- The structural-chokepoint idea builds on the structural-versus-statistical partition in the Agentic AI Defense in Depth work, and on the lethal trifecta (Simon Willison, 2025).
+- The structural-chokepoint idea builds on the structural-versus-statistical partition in the defense-in-depth section of this repository, and on the lethal trifecta (Simon Willison, 2025).

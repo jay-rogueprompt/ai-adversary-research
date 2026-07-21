@@ -50,7 +50,7 @@ Everything here is labeled, honestly.
 - **`[DESIGN]`** worked-through architecture. Mine, defensible, not a deployed system.
 - **`[OPEN]`** a hypothesis, staked in public ahead of the case files, open to being wrong.
 
-Nothing here is a deployed system, a weaponized artifact, or drawn from any employer environment. **Public cases and general method only.**
+This is a reference architecture, not a product. It operationalizes existing frameworks; it does not propose a new one. Nothing here is a deployed system, a weaponized artifact, or drawn from any employer environment. **Public cases and general method only.** If a section reads to you like an operational claim, that is a bug, tell me.
 
 ---
 
@@ -61,7 +61,7 @@ Nothing here is a deployed system, a weaponized artifact, or drawn from any empl
 
 - The lethal trifecta: Simon Willison, 2025
 - Least agency: OWASP Top 10 for Agentic Applications, 2026
-- Instruction/data separation (dual-LLM; CaMeL): Willison; Google DeepMind, 2025
+- Instruction/data separation: the dual-LLM pattern (Willison, 2023) and CaMeL (Google DeepMind, 2025)
 - PDP/PEP, deny-by-default: NIST SP 800-207
 - Cyber Kill Chain and courses-of-action matrix: Lockheed Martin
 - Diamond Model of Intrusion Analysis; Pyramid of Pain
@@ -75,7 +75,7 @@ Nothing here is a deployed system, a weaponized artifact, or drawn from any empl
 
 ## `// whoami`
 
-A cyber threat intelligence and counter-adversary operations practitioner. I led a team that detected, disrupted, and neutralized adversaries in real time inside a large regulated enterprise. Today I work in AI security at a regulated healthcare organization, and this repo is where I bring that discipline to the future of AI counter-adversary operations.
+Cyber threat intelligence and counter-adversary operations. I led a team that detected, disrupted, and neutralized adversaries in real time inside a large regulated enterprise. Today I work in AI security at a regulated healthcare organization, and this repo is where I bring that discipline to the future of AI counter-adversary operations.
 
 Contact and more writing: [Substack](https://substack.com/@rogueprompt) · [LinkedIn](https://www.linkedin.com/in/jayd-rogueprompt)
 
