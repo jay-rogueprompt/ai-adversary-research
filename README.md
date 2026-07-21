@@ -4,7 +4,7 @@
 
 **Counter-adversary research and defense-in-depth for AI systems.**
 
-Who attacks AI, how they persist, and what the way they do it reveals about *who they are.*
+How an AI system is attacked is a fingerprint for *who* attacked it.
 
 ![status](https://img.shields.io/badge/status-research_in_progress-2ea44f?style=flat-square)
 ![MITRE ATLAS](https://img.shields.io/badge/MITRE-ATLAS-e02f2f?style=flat-square)
@@ -16,15 +16,14 @@ Who attacks AI, how they persist, and what the way they do it reveals about *who
 
 ---
 
-## The two ideas this hangs on
+## The thesis
 
-> **Attribution is convergence, and AI TTPs are a new axis of it.**
-> A single indicator attributes nobody. Folded into the Diamond Model alongside infrastructure, tooling, and history, an adversary's AI tradecraft becomes another vertex of a picture that does.
+> **Attribution comes from context, not indicators. And how an adversary abused the AI is new context.**
+> An IOC is cheap and disposable. What identifies an actor is the whole chain of what they did and why: they injected the agent, rode its access deeper into the environment, staged the data, moved it out. Every step is a context clue, and together they build the profile. The AI compromise is one thread in that chain. Read it in isolation, as an application-security bug, and you throw the picture away. Read it as part of the campaign, and it becomes attribution.
 
-> **Structural beats statistical.**
-> Every control on an AI system either decides from a fact the adversary cannot rewrite (structural: signed tokens, egress allowlists, bind manifests) or from a classifier it can evade (statistical: it fails, usually silently). Statistical controls buy cost and signal. Structural controls are what hold.
+This is the Pyramid of Pain applied to AI: atomic indicators sit at the bottom, behavior and context at the top, and the way an adversary uses AI is a new source of high-value behavior. It is the through-line of everything here, a hypothesis staked in public and open to being wrong. Attribution was always convergence; AI tradecraft is a new axis of it.
 
-The first idea leads. The second is how the defense follows from the offense.
+**The defensive companion.** Every control on an AI system is either **structural** (it decides from a fact the adversary cannot rewrite: signed tokens, egress allowlists, bind manifests) or **statistical** (a classifier it can evade, and one that fails silently when it does). Statistical controls buy cost and signal. Structural controls are what hold. Reading the attack in context tells you two things at once: which controls the adversary beat, and which choices they made, which point back to who they are.
 
 ---
 
@@ -74,10 +73,10 @@ Nothing here is a deployed system, a weaponized artifact, or drawn from any empl
 
 ---
 
-<div align="center">
+## `// whoami`
 
-A cyber threat intelligence and counter-adversary practitioner, pointed at the surface everyone else is arriving at from application security.
+Navy, then cyber threat intelligence, then years operating against real adversaries: nation-state APTs, ransomware crews, and organized threat actors. Led CTI teams, contributed to the **Verizon DBIR** and two **CISA #StopRansomware** advisories.
+
+I attribute attacks and disrupt adversaries. This is that discipline, applied to how AI actually gets attacked.
 
 <sub>All opinions are my own and do not reflect my employer.</sub>
-
-</div>
