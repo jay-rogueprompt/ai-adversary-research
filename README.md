@@ -59,15 +59,15 @@ Nothing here is a deployed system, a weaponized artifact, or drawn from any empl
 
 <br>
 
-- The lethal trifecta — Simon Willison, 2025
-- Least agency — OWASP Top 10 for Agentic Applications, 2026
-- Instruction/data separation (dual-LLM; CaMeL) — Willison; Google DeepMind, 2025
-- PDP/PEP, deny-by-default — NIST SP 800-207
-- Cyber Kill Chain and courses-of-action matrix — Lockheed Martin
+- The lethal trifecta: Simon Willison, 2025
+- Least agency: OWASP Top 10 for Agentic Applications, 2026
+- Instruction/data separation (dual-LLM; CaMeL): Willison; Google DeepMind, 2025
+- PDP/PEP, deny-by-default: NIST SP 800-207
+- Cyber Kill Chain and courses-of-action matrix: Lockheed Martin
 - Diamond Model of Intrusion Analysis; Pyramid of Pain
-- Adversary and defensive technique vocabularies — MITRE ATLAS, MITRE D3FEND
-- Risk taxonomies — OWASP LLM Top 10 2025, Agentic Top 10 2026
-- Governance — NIST AI RMF, Generative AI Profile (AI 600-1)
+- Adversary and defensive technique vocabularies: MITRE ATLAS, MITRE D3FEND
+- Risk taxonomies: OWASP LLM Top 10 2025, Agentic Top 10 2026
+- Governance: NIST AI RMF, Generative AI Profile (AI 600-1)
 
 </details>
 
