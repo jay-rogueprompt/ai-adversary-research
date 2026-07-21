@@ -8,6 +8,12 @@ Every attack against an AI system is a kill chain. It has stages, and the advers
 
 This section reads one chain per OWASP LLM Top 10 entry, and it puts two lenses on every chain, because one lens without the other is either a catalog or a single point of failure.
 
+## The chain does not stop at the model's edge
+
+Most AI kill-chain writing ends inside the AI system: injection, tool call, exfil, done. But an adversary rarely wants the model. They want what the model can reach. The AI compromise is usually a pivot, a way into the environment behind it, and the stages that follow (where they went, what they staged, how they moved it out) are part of the same chain.
+
+Reading only the in-model stages is the application-security view. Reading the full chain, across the boundary and into the campaign, is the counter-adversary view, and it is where the context that attributes an actor lives. Which door they came in is a vulnerability. What they did once inside is a profile. Every writeup notes where the chain leaves the AI system, because that hand-off is often the most revealing stage of all.
+
 ## Lens 1: the courses-of-action matrix (coverage)
 
 For each stage of the chain, name an interdiction. This is the Lockheed Martin Cyber Kill Chain courses-of-action model (Detect, Deny, Disrupt, Degrade, Deceive, Destroy) applied to the AI surface. The value is coverage: if one control fails, a later stage still offers a chance to catch the adversary. This is the defense-in-depth view, and it is the table in every writeup.
