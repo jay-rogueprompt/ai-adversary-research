@@ -59,15 +59,15 @@ Nothing here is a deployed system, a weaponized artifact, or drawn from any empl
 
 <br>
 
-- The lethal trifecta — Simon Willison, 2025
-- Least agency — OWASP Top 10 for Agentic Applications, 2026
-- Instruction/data separation (dual-LLM; CaMeL) — Willison; Google DeepMind, 2025
-- PDP/PEP, deny-by-default — NIST SP 800-207
-- Cyber Kill Chain and courses-of-action matrix — Lockheed Martin
+- The lethal trifecta: Simon Willison, 2025
+- Least agency: OWASP Top 10 for Agentic Applications, 2026
+- Instruction/data separation (dual-LLM; CaMeL): Willison; Google DeepMind, 2025
+- PDP/PEP, deny-by-default: NIST SP 800-207
+- Cyber Kill Chain and courses-of-action matrix: Lockheed Martin
 - Diamond Model of Intrusion Analysis; Pyramid of Pain
-- Adversary and defensive technique vocabularies — MITRE ATLAS, MITRE D3FEND
-- Risk taxonomies — OWASP LLM Top 10 2025, Agentic Top 10 2026
-- Governance — NIST AI RMF, Generative AI Profile (AI 600-1)
+- Adversary and defensive technique vocabularies: MITRE ATLAS, MITRE D3FEND
+- Risk taxonomies: OWASP LLM Top 10 2025, Agentic Top 10 2026
+- Governance: NIST AI RMF, Generative AI Profile (AI 600-1)
 
 </details>
 
@@ -75,8 +75,12 @@ Nothing here is a deployed system, a weaponized artifact, or drawn from any empl
 
 ## `// whoami`
 
+<<<<<<< HEAD
 A cyber threat intelligence and counter-adversary operations practitioner. I led a team that detected, disrupted, and neutralized adversaries in real time inside a large regulated enterprise. Today I work in AI security at a regulated healthcare organization, and this repo is where I bring that discipline to the future of AI counter-adversary operations.
 
 Contact and more writing: [Substack](https://substack.com/@rogueprompt) · [LinkedIn](https://www.linkedin.com/in/jayd-rogueprompt)
+=======
+A cyber threat intelligence and counter-adversary operations practitioner: nation-state adversary tracking, threat hunting, incident response, insider threat, CTI program leadership in a large regulated enterprise. This repo is the defender's-eye view of a surface most AI security writing approaches from the application-security side.
+>>>>>>> 5c62fcb7c05165e7c1376b55c3532a91860b796d
 
 > _All opinions are my own and do not reflect my employer._
