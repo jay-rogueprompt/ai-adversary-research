@@ -75,8 +75,8 @@ Nothing here is a deployed system, a weaponized artifact, or drawn from any empl
 
 ## `// whoami`
 
-A cyber threat intelligence and counter-adversary operations practitioner: nation-state adversary tracking, threat hunting, incident response, insider threat, CTI program leadership in a large regulated enterprise. This repo is the defender's-eye view of a surface most AI security writing approaches from the application-security side.
+A cyber threat intelligence and counter-adversary operations practitioner. I led a team that detected, disrupted, and neutralized adversaries in real time inside a large regulated enterprise. Today I work in AI security at a regulated healthcare organization, and this repo is where I bring that discipline to the future of AI counter-adversary operations.
 
 Contact and more writing: [Substack](https://substack.com/@rogueprompt) · [LinkedIn](https://www.linkedin.com/in/jayd-rogueprompt)
 
-<sub>All opinions are my own and do not reflect my employer.</sub>
+> _All opinions are my own and do not reflect my employer._
