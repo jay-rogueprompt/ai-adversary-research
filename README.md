@@ -140,8 +140,8 @@ I came to AI security from the adversary. Years running and leading counter-adve
 
 Today I work in AI security. This repo is where that discipline gets pointed at adversary use of AI.
 
-I came to AI security from threat intelligence. Attribution is the part I kept.
 
+ 
 **More:** [rogue-prompt.com](https://rogue-prompt.com) · [Substack](https://rogueprompt.substack.com) · [LinkedIn](https://www.linkedin.com/in/jayd-rogueprompt)
 
 > _All opinions are my own and do not reflect my employer._
