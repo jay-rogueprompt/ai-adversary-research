@@ -19,7 +19,7 @@ Method is published on purpose. In intelligence, published method is how standin
 | [`actor-profiling.md`](actor-profiling.md) | Reading provider misuse reporting as CTI, with the full extract set | **live** |
 | [`collection-plan.md`](collection-plan.md) | Standing PIRs, source tiers, triage gate, cadence | **live** |
 | [`extraction-method.md`](extraction-method.md) | Report to finished intelligence, with gates | **live** |
-| [`guardrail-interaction.md`](guardrail-interaction.md) | Goal-directedness under obstruction as an attribution surface | drafting |
+| `guardrail-interaction.md` | Goal-directedness under obstruction as an attribution surface | drafting |
 
 ---
 

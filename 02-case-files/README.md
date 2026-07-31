@@ -14,9 +14,9 @@ One file per case. Same structure every time, so the set can be read as a body o
 
 | ID | Case | PIR | Verdict | Status |
 |---|---|---|---|---|
-| [`CF-01`](cf-01-exploitgym.md) | OpenAI ExploitGym sandbox escape, July 2026 | PIR-2, PIR-5 | drafting | drafting |
-| [`CF-02`](cf-02-gtg-1002.md) | GTG-1002 AI-orchestrated espionage, 2025 | PIR-1, PIR-2 | drafting | drafting |
-| [`CF-03`](cf-03-promptsteal.md) | PROMPTSTEAL, APT28 runtime LLM use | PIR-1 | drafting | drafting |
+| `CF-01` | OpenAI ExploitGym sandbox escape, July 2026 | PIR-2, PIR-5 | drafting | drafting |
+| `CF-02` | GTG-1002 AI-orchestrated espionage, 2025 | PIR-1, PIR-2 | drafting | drafting |
+| `CF-03` | PROMPTSTEAL, APT28 runtime LLM use | PIR-1 | drafting | drafting |
 
 ---
 

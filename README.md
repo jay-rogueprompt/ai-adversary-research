@@ -56,8 +56,8 @@ Method leads. Case files are the output. Everything in `90` is supporting materi
 
 | Path | What it is | Status |
 |---|---|---|
-| [`01 · method/`](01-method) | The extraction method, and the analytic questions it turns on | drafting |
-| [`02 · case-files/`](02-case-files) | The method run against public cases, one file each | drafting |
+| [`01 · method/`](01-method) | The extraction method, and the analytic questions it turns on | several **live** |
+| [`02 · case-files/`](02-case-files) | The method run against public cases, one file each | none shipped yet |
 | [`03 · ai-and-identity/`](03-ai-and-identity) | Agent identity, non-human credentials, and what they are worth to an adversary | planned |
 | [`04 · criminal-ai-ecosystems/`](04-criminal-ai-ecosystems) | Adversary AI tooling as a market, read from public reporting | planned |
 | [`90 · defending-ai-deployments/`](90-defending-ai-deployments) | Persistence typology, structural and statistical controls, defense in depth | several **live** |
@@ -140,8 +140,6 @@ I came to AI security from the adversary. Years running and leading counter-adve
 
 Today I work in AI security. This repo is where that discipline gets pointed at adversary use of AI.
 
-
- 
 **More:** [rogue-prompt.com](https://rogue-prompt.com) · [Substack](https://rogueprompt.substack.com) · [LinkedIn](https://www.linkedin.com/in/jayd-rogueprompt)
 
 > _All opinions are my own and do not reflect my employer._
